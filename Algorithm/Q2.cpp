@@ -5,7 +5,7 @@ int main(void)
 {
 	int a, b, c, d;
 	int max;
-	printf("4가지 정수의 최댓값을 구합니다.\n");
+	printf("세 정수의 최댓값을 구합니다.\n");
 	printf("a의 값 : "); scanf_s("%d", &a);
 	printf("b의 값 : "); scanf_s("%d", &b);
 	printf("c의 값 : "); scanf_s("%d", &c);
