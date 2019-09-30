@@ -5,6 +5,8 @@
 int main(void)
 {
 	IntStack s;
+	int StackA;
+	int StackB;
 
 	if (Initialize(&s, 12) == -1) {
 		puts("스택의 생성에 실패했습니다.");
@@ -27,7 +29,7 @@ int main(void)
 		case 1: 
 			printf("데이터：");
 			scanf_s("%d", &x);
-			if (Push(&s, StackA, x) == -1)
+			if (Push(&s, StackA, &x) == -1)
 				puts("\a오류 : 푸시에 실패했습니다.");
 			break;
 
@@ -53,7 +55,7 @@ int main(void)
 	case 5: 
 		printf("검색 데이터：");
 			scanf_s("%d", &x);
-			if ((idx = Search(&s, StackA, x)) == -1)
+			if ((idx = Search(&s, StackA, &x)) == -1)
 				puts("\a오류 : 검색에 실패했습니다.");
 			else
 				printf("데이터는 인덱스 %d 위치에 있습니다.\n", idx);
@@ -66,7 +68,7 @@ int main(void)
 		case 7: 
 			printf("데이터：");
 			scanf_s("%d", &x);
-			if (Push(&s, StackB, x) == -1)
+			if (Push(&s, StackB, &x) == -1)
 				puts("\a오류 : 푸시에 실패했습니다.");
 			break;
 
@@ -91,7 +93,7 @@ int main(void)
 		case 11: 
 			printf("검색 데이터：");
 			scanf_s("%d", &x);
-			if ((idx = Search(&s, StackB, x)) == -1)
+			if ((idx = Search(&s, StackB, &x)) == -1)
 				puts("\a오류 : 검색에 실패했습니다.");
 			else
 				printf("데이터는 인덱스 %d 위치에 있습니다.\n", idx);

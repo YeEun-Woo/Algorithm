@@ -1,4 +1,4 @@
-
+#define _CRT_SECURE_NO_WARNIGNS
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -50,21 +50,21 @@ int main(void)
 
 	puts("2진 검색");
 	printf("요소수 : ");
-	scanf("%d", &nx);
+	scanf_s("%d", &nx);
 	x = (int*)calloc(nx, sizeof(int));	
 
 	printf("오름차순으로 입력하세요.\n");
 	printf("x[0] : ");
-	scanf("%d", &x[0]);
+	scanf_s("%d", &x[0]);
 
 	for (i = 1; i < nx; i++) {
 		do {
 			printf("x[%d] : ", i);
-			scanf("%d", &x[i]);
+			scanf_s("%d", &x[i]);
 		} while (x[i] < x[i - 1]);	
 	}
 	printf("검색 값 : ");
-	scanf("%d", &ky);
+	scanf_s("%d", &ky);
 
 	idx = bin_search(x, nx, ky);	
 
