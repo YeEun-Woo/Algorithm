@@ -6,7 +6,7 @@
 int Initialize(IntStack *s, int max)
 {
 	s->ptr = 0;
-	if ((s->stk = calloc(max, sizeof(int))) == NULL) {
+	if ((s->stk = (int*)calloc(max, sizeof(int))) == NULL) {
 		s->max = 0;								
 		return -1;
 	}
