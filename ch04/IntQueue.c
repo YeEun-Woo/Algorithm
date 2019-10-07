@@ -5,7 +5,7 @@
 int Initialize(IntQueue *q, int max)
 {
 	q->num = q->front = q->rear = 0;
-	if ((q->pue = calloc(max, sizeof(int)) == NULL) {
+	if ((q->que = (int*)calloc(max, sizeof(int))) == NULL) {
 		q->max = 0;
 			return -1;
 	}
