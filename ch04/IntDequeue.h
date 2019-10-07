@@ -1,13 +1,12 @@
 #ifndef ___IntDequeue
 #define ___IntDequeue
 
-/*--- 큐를 구현하는 구조체 ---*/
 typedef struct {
-	int max;		/* 큐의 최대 용량 */
-	int num;		/* 현재 요솟수 */
-	int front;		/* 맨 앞 요소를 가리키는 커서 */
-	int rear;		/* 맨 뒤 요소를 가리키는 커서 */
-	int *que;		/* 큐를 가리키는 포인터 */
+	int max;		
+	int num;		
+	int front;		
+	int rear;		
+	int *que;		
 } IntDequeue;
 
 int Initialize(IntDequeue *q, int max);
