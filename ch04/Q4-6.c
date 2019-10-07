@@ -24,51 +24,51 @@ int main(void)
 		if (m == 0) break;
 
 		switch (m) {
-		case 1: /*--- 맨 앞에 데이터 인큐 ---*/
+		case 1: 
 			printf("데이터：");   scanf_s("%d", &x);
 			if (EnqueFront(&que, x) == -1)
 				puts("\a오류 : 인큐에 실패했습니다.");
 			break;
 
-		case 2: /*--- 맨 앞의 데이터 디큐 ---*/
+		case 2: 
 			if (DequeFront(&que, &x) == -1)
 				puts("\a오류 : 디큐에 실패했습니다.");
 			else
 				printf("디큐한 데이터는 %d입니다.\n", x);
 			break;
 
-		case 3: /*--- 맨 앞 피크 ---*/
+		case 3: 
 			if (PeekFront(&que, &x) == -1)
 				puts("\a오류 : 피크에 실패했습니다.");
 			else
 				printf("피크한 데이터는 %d입니다.\n", x);
 			break;
 
-		case 4: /*--- 덱 출력 ---*/
+		case 4: 
 			Print(&que);
 			break;
 
-		case 5: /*--- 맨 뒤에 데이터 인큐 ---*/
+		case 5: 
 			printf("data：");   scanf_s("%d", &x);
 			if (EnqueRear(&que, x) == -1)
 				puts("\a오류 : 인큐에 실패했습니다.");
 			break;
 
-		case 6: /*--- 맨 뒤의 데이터 디큐 ---*/
+		case 6: 
 			if (DequeRear(&que, &x) == -1)
 				puts("\a오류 : 디큐에 실패했습니다.");
 			else
 				printf("디큐한 데이터는 %d입니다.\n", x);
 			break;
 
-		case 7: /*--- 맨 뒤 피크 ---*/
+		case 7: 
 			if (PeekRear(&que, &x) == -1)
 				puts("\a오류 : 피크에 실패했습니다.");
 			else
 				printf("피크한 데이터는 %d입니다.\n", x);
 			break;
 
-		case 8: /*--- 검색 ---*/
+		case 8: 
 			printf("검색 데이터：");
 			scanf_s("%d", &x);
 			if ((idx = Search(&que, x)) == -1)
@@ -79,11 +79,11 @@ int main(void)
 			}
 			break;
 
-		case 9: /*--- 초기화 ---*/
+		case 9: 
 			Clear(&que);
 			break;
 
-		case 10: /*--- 빈 상태 / 가득 찬 상태 판단 ---*/
+		case 10: 
 			printf("큐가 비어 있%s.\n", IsEmpty(&que) ? "습니다" : "지 않습니다");
 			printf("큐가 가득 %s.\n", IsFull(&que) ? "찼습니다" : "차지 않았습니다");
 			break;
