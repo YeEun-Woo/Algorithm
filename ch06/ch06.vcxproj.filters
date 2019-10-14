@@ -30,5 +30,8 @@
     <ClCompile Include="insertion.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Q8.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
