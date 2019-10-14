@@ -1,4 +1,4 @@
-#define _CRT_SECUR_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #define swap(type, x, y) do { type t = x; x = y; y = t; }while(0)
