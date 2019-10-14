@@ -21,7 +21,7 @@ int main(void)
 
 	printf("요소 개수 : ");
 	scanf_s("%d", &nx);
-	x = calloc(nx, sizeof(int));
+	x = (int*)calloc(nx, sizeof(int));
 
 	for (i = 0; i < nx; i++) {
 		printf("x[%d] : ", i);
