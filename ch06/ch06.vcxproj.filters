@@ -33,5 +33,8 @@
     <ClCompile Include="Q8.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="partition.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
