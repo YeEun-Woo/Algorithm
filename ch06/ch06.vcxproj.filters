@@ -39,5 +39,8 @@
     <ClCompile Include="quick.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="merge_ary.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
