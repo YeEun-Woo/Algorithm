@@ -13,7 +13,6 @@ void merge(const int a[], int na, const int b[], int nb, int c[])
 	while (pb < nb)
 		c[pc++] = b[pb++];
 }
-
 int main(void)
 {
 	int i, na, nb;
@@ -39,7 +38,6 @@ int main(void)
 			scanf_s("%d", &b[i]);
 		} while (b[i] < b[i - 1]);
 	}
-
 	merge(a, na, b, nb, c);
 	puts("배열 a와 b를 병합하여 배열 c에 저장했습니다.");
 	for (i = 0; i < na + nb; i++)
