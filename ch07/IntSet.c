@@ -59,7 +59,7 @@ void Assign(IntSet *s1, const IntSet *s2)
 int Equal(const IntSet *s1, const IntSet *s2)
 {
 	int i, j;
-	int(Size(s1) != Size(s2))
+	if (Size(s1) != Size(s2))
 		return 0;
 	for (i = 0; i < s1->num; i++) {
 		for (j = 0; j < s2->num; j++)
@@ -94,6 +94,7 @@ IntSet *Intersection(IntSet *s1, const IntSet *s2, const IntSet *s3)
 IntSet *Difference(IntSet *s1, const IntSet *s2, const IntSet *s3)
 {
 	int i, j;
+	s1->num = 0;
 	for (i = 0; i < s2->num; i++) {
 		for (j = 0; j < s3->num; j++)
 			if (s2->set[i] == s3->set[j])
@@ -122,7 +123,8 @@ void PrintLn(const IntSet *s)
 	putchar('\n');
 }
 
-void Terminate(IntSet *s) {
+void Terminate(IntSet *s) 
+{
 	if (s->set != NULL) {
 		free(s->set);
 		s->max = s->num = 0;
